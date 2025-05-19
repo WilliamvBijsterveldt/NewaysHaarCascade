@@ -1,10 +1,8 @@
 ﻿import pyrealsense2 as rs
 import cv2
-import sys
-import time
 import numpy as np
 
-cascPath = "haarcascade_frontalface_alt.xml"
+cascPath = "Data/haarcascade_frontalface_default.xml"
 
 pipeline = rs.pipeline()
 config = rs.config()
