@@ -6,7 +6,7 @@ import requests
 import threading
 
 # Load Haar Cascade
-cascPath = "Data/cascadeTristan.xml"
+cascPath = "Data/cascade.xml"
 capCascade = cv2.CascadeClassifier(cascPath)
 apiUrl = "http://10.56.203.96:5000/crate/"
 
