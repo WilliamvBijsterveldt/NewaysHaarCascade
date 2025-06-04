@@ -2,7 +2,7 @@
 import os
 
 # === CONFIGURATION ===
-video_path = 'Data/2025-05-26 11-14-16.mkv'         # Path to your video file
+video_path = 'Data/2025-05-28 11-02-31.mkv'         # Path to your video file
 output_folder = 'frames_output'        # Folder to save the frames
 frame_skip = 15                         # Save 1 frame per 0.5 sec
 

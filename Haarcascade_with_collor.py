@@ -11,7 +11,7 @@ def detect_objects(image, cascade_path):
         scaleFactor=1.09,
         minNeighbors=5,
         minSize=(58, 58),
-        maxSize=(100, 100),
+        maxSize=(70, 70),
     )
     return objects
 
@@ -43,7 +43,7 @@ def main():
     colour_ranges = [
         {"colour": "blue", "bgr": (70, 50, 40), "tolerance": 20},
         {"colour": "green", "bgr": (120, 120, 90), "tolerance": 20},
-        {"colour": "red", "bgr": (60, 60, 200), "tolerance": 20},
+        {"colour": "brown", "bgr": (60, 60, 60), "tolerance": 20},
     ]
 
     # RealSense-pipeline setup
@@ -84,6 +84,7 @@ def main():
                 cv2.putText(frame, evaluation, (x, y - 30), cv2.FONT_HERSHEY_SIMPLEX, 0.6, colour_rectangle, 2)
                 colour_text = f"BGR: {colour_average_int}"
                 cv2.putText(frame, colour_text, (x, y + h + 20), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1)
+                print(f"Colour value: {colour_average_int} -> {evaluation}")
 
             total, passed, failed = count_evaluated_objects(evaluations)
             colour_count = count_colours(evaluations)
